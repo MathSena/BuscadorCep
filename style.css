@@ -1,0 +1,95 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Mudança de fonte para Roboto */
+  background-image: linear-gradient(325deg, #e76fff 0, #b962ff 25%, #8953f2 50%, #5944d2 75%, #2336b4 100%);
+  color: #dadce7;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+#app {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0.4rem;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+form input {
+  border: none;
+  font-size: 1.5rem; /* Tamanho da fonte maior */
+  font-weight: 100;
+  color: #000;
+  width: 250px; /* Largura maior */
+  outline: none;
+  padding: 15px; /* Padding maior */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input::placeholder {
+  color: #969696;
+  text-align: center;
+}
+
+form button {
+  padding: 1rem 2rem; /* Padding maior para um botão mais largo e alto */
+  color: #fff;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.5rem; /* Tamanho da fonte maior */
+  background-image: linear-gradient(325deg, #e76fff 0, #b962ff 25%, #8953f2 50%, #5944d2 75%, #2336b4 100%);
+  font-weight: 100;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: all 1s;
+}
+
+p:nth-child(1) {
+  padding-top: 1.3rem;
+}
+
+p {
+  color: #4091dd;
+  font-size: 1.1rem;
+  margin: 0.6rem 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  body {
+    grid-template-columns: 1fr;
+    padding: 10px; /* Adiciona padding para não ficar muito colado nas bordas */
+  }
+
+  #app {
+    width: 100%; /* Faz com que ocupe a largura toda, com a margem ajustando o espaço nas laterais */
+  }
+
+  form input {
+    width: 100%; /* Ajusta a largura do input para ser responsiva */
+    box-sizing: border-box; /* Garante que o padding não altere a largura do elemento */
+  }
+}
